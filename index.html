@@ -34,16 +34,17 @@
             color: #ffcc00;
         }
 
-        /* HERO / BERANDA */
+        /* HERO */
         .hero {
             height: 90vh;
-            background: url("https://images.unsplash.com/photo-1509622901209-d4c66d3a3d5a?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
             position: relative;
+            background-size: cover;
+            background-position: center;
         }
         .hero::after {
             content: "";
@@ -60,9 +61,6 @@
             margin-bottom: 10px;
             color: #ffcc00;
         }
-        .hero p {
-            font-size: 1.2rem;
-        }
 
         /* SECTION */
         section {
@@ -70,7 +68,6 @@
             max-width: 1000px;
             margin: auto;
         }
-
         h2 {
             text-align: center;
             margin-bottom: 30px;
@@ -78,12 +75,6 @@
         }
 
         /* MENU */
-        .menu-box {
-            background: #222;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
         .menu-item {
             display: flex;
             justify-content: space-between;
@@ -114,6 +105,28 @@
             color: #ffcc00;
             text-decoration: none;
         }
+
+        /* TOMBOL GOOGLE FORM */
+        .hover-card {
+            background: #111;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+        .google-form-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #ffcc00;
+            border-radius: 8px;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .google-form-btn:hover {
+            background: #e6b800;
+        }
     </style>
 </head>
 <body>
@@ -129,34 +142,51 @@
         </div>
     </nav>
 
-   <!-- HERO / BERANDA -->
-<section class="hero" id="beranda" 
-    style="
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
-    url('c:\Users\Advan\Pictures\sam.jpg') center/cover no-repeat;
-    padding: 120px 20px;
-    text-align: center;
-    color: white;
-    animation: fadeIn 1.5s ease;
-">
-    <div class="hero-content" style="max-width: 700px; margin: auto; animation: slideUp 1.3s ease;">
-        <h1 style="
-            font-size: 3rem; 
-            font-weight: 700; 
-            text-shadow: 0 0 15px rgba(255, 140, 0, 0.7);
-        ">
-            Tembi Coffee Angkringan
-        </h1>
+    <!-- HERO DENGAN BACKGROUND FOTO YANG DIUPLOAD -->
+    <section class="hero" id="beranda" 
+        style="
+        background-image: linear-gradient(rgba(255, 255, 255, 0.041), rgba(255, 255, 255, 0)), 
+        url('assets/img/bar-tutup.jpg');
+        "
+    >
+    <div class="hero-content">
 
-        <p style="font-size: 1.2rem; margin-bottom: 20px;">Nikmati Kopi, Kehangatan, dan Cerita di Setiap Malam</p>
+    <!-- JUDUL ORANGE -->
+    <h1 style="
+        color: #ff9800;
+        text-shadow: 0 0 12px rgba(0,0,0,0.9);
+        font-weight: 700;
+    ">
+        Tembi Coffee Angkringan
+    </h1>
 
-        <p>☕ <b>Kopi Pilihan</b> – Kopi berkualitas dengan racikan barista lokal.</p>
-        <p>🔥 <b>Angkringan Nyaman</b> – Tempat pas buat nongkrong malam.</p>
-        <p>🎵 <b>Live Musik</b> – Temani malammu dengan musik akustik.</p>
+    <!-- SUBJUDUL PUTIH -->
+    <p style="
+        font-size: 2.5rem; 
+        margin-bottom: 20px; 
+        color: #ffffff; 
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    ">
+        Nikmati Kopi, Kehangatan, dan Cerita di Setiap Malam.
+    </p>
 
-        <br>
-    </div>
-</section>
+    <!-- LIST PUTIH -->
+    <p style="color: #ffffff; font-size: 1.3rem; text-shadow: 0 0 10px rgba(0,0,0,0.9);">
+        ☕ <b>Kopi Pilihan</b> – Kopi berkualitas dengan racikan barista lokal.
+    </p>
+
+    <p style="color: #ffffff; font-size: 1.3rem; text-shadow: 0 0 10px rgba(0,0,0,0.9);">
+        🔥 <b>Angkringan Nyaman</b> – Tempat pas buat nongkrong malam.
+    </p>
+
+    <p style="color: #ffffff; font-size: 1.3rem; text-shadow: 0 0 10px rgba(0,0,0,0.9);">
+        🎵 <b>Live Musik</b> – Temani malammu dengan musik akustik.
+    </p>
+
+</div>
+
+
+    </section>
 
     <!-- MENU -->
     <section id="menu">
@@ -184,7 +214,7 @@
             <div class="menu-item"><span>Sate Telur Puyuh</span><span>4K</span></div>
             <div class="menu-item"><span>Kepala Ayam</span><span>5K</span></div>
             <div class="menu-item"><span>Gorengan</span><span>1K</span></div>
-            <div class="menu-item"><span>Aneka Makanan</span><span>1K/2k</span></div>
+            <div class="menu-item"><span>Aneka Makanan</span><span>1K/2K</span></div>
             <div class="menu-item"><span>Wedang Jahe</span><span>4K</span></div>
             <div class="menu-item"><span>Susu Jahe</span><span>7K</span></div>
             <div class="menu-item"><span>Wedang Uwuh</span><span>6K</span></div>
@@ -194,10 +224,9 @@
             <div class="menu-item"><span>Susu (Es/Panas)</span><span>4K</span></div>
             <div class="menu-item"><span>Chocolatos</span><span>4K</span></div>
             <div class="menu-item"><span>Drink Beng-beng</span><span>4K</span></div>
-            <div class="menu-item"><span>aneka kopi saset</span><span>4K</span></div>
+            <div class="menu-item"><span>Aneka Kopi Saset</span><span>4K</span></div>
         </div>
     </section>
-
 
     <!-- GALERI -->
     <section id="galeri">
@@ -210,7 +239,7 @@
             <img src="assets/img/rong.jpg">
             <video controls>
                 <source src="assets/img/angkringan.mp4" type="video/mp4">
-                 <source src="assets/img/jj.mp4" type="video/mp4">
+                <source src="assets/img/jj.mp4" type="video/mp4">
             </video>
         </div>
     </section>
@@ -219,7 +248,7 @@
     <section id="kontak">
         <h2>Kontak & Lokasi</h2>
         <div class="kontak-box">
-            📍 <b>Alamat:</b> 49H3+6G7 Coffee & Angkringan, Near, Tembi, Timbulharjo, Sewon, Bantul Regency, Special Region of Yogyakarta 55185
+            📍 <b>Alamat:</b> 49H3+6G7 Coffee & Angkringan, Near, Tembi, Timbulharjo, Sewon, Bantul  
             <br>
             📌 <b>Google Maps:</b>  
             <a href="https://maps.app.goo.gl/BUjmx9Ukvhxn73D19">Klik untuk membuka lokasi</a>
@@ -229,18 +258,17 @@
             <br>
             🎵 <b>TikTok:</b>  
             <a href="https://www.tiktok.com/@tembicoffedanangk?is_from_webapp=1&sender_device=pc">Tembicoffedanangkringan</a>
-            
-             <!-- Tombol Google Form Reservasi -->
-        <div class="hover-card">
-            <h3>Reservasi Online</h3>
-            <p>Klik tombol di bawah untuk melakukan reservasi melalui Google Form resmi kami.</p>
 
-            <a href="https://forms.gle/H9nEZET9XPjoLQoW8" 
-               target="_blank" 
-               class="google-form-btn">
-                Buka Form Reservasi
-            </a>
-        </div>
+            <div class="hover-card">
+                <h3>Reservasi Online</h3>
+                <p>Klik tombol di bawah untuk melakukan reservasi melalui Google Form resmi kami.</p>
+
+                <a href="https://forms.gle/H9nEZET9XPjoLQoW8" 
+                   target="_blank" 
+                   class="google-form-btn">
+                    Buka Form Reservasi
+                </a>
+            </div>
 
         </div>
     </section>
